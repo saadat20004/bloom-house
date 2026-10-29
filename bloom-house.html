@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bloom House | Poolside Oasis for Events in Orlando, FL</title>
+<meta name="description" content="Bloom House is a private poolside backyard oasis in Orlando, FL for birthdays, quinceañeras, weddings, showers and reunions. Up to 45 guests, from $90 per hour.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+  --lagoon:#0D3A42;
+  --lagoon-2:#12505A;
+  --pool:#18A2B5;
+  --pool-soft:#D8F1F4;
+  --palm:#2E6B4E;
+  --palm-soft:#E3EFE7;
+  --bloom:#F26B4F;
+  --bloom-dark:#D9532F;
+  --bloom-soft:#FDE8E1;
+  --glow:#F4C24E;
+  --sand:#FBF6EE;
+  --sand-2:#F3EBDD;
+  --ink:#16272B;
+  --muted:#5D6F73;
+  --line:#E4DCCD;
+  --white:#fff;
+  --r-lg:28px;
+  --r-md:18px;
+  --r-sm:12px;
+  --shadow:0 18px 50px -20px rgba(13,58,66,.35);
+  --ease:cubic-bezier(.22,.8,.26,1);
+  --head:"Bricolage Grotesque",system-ui,sans-serif;
+  --body:"Figtree",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px;overflow-x:hidden;overflow-x:clip}
+body{font-family:var(--body);color:var(--ink);background:var(--sand);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--glow);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1200px,92vw);margin-inline:auto}
+h1,h2,h3{font-family:var(--head);line-height:1.05;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.4vw,3.3rem);font-weight:800}
+.eyebrow{display:inline-flex;align-items:center;gap:.5rem;font-weight:700;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--bloom-dark)}
+.eyebrow i{font-size:.9rem}
+.lead{color:var(--muted);font-size:1.08rem;max-width:560px}
+section{padding:110px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;margin-bottom:48px;flex-wrap:wrap}
+.sec-head h2{margin-top:.6rem}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.95rem 1.6rem;border-radius:999px;font-weight:700;border:2px solid transparent;cursor:pointer;transition:transform .35s var(--ease),background .3s,color .3s,box-shadow .35s var(--ease),border-color .3s;white-space:nowrap}
+.btn-bloom{background:var(--bloom);color:#fff;box-shadow:0 12px 26px -12px rgba(242,107,79,.8)}
+.btn-bloom:hover{background:var(--bloom-dark);transform:translateY(-2px);box-shadow:0 18px 32px -14px rgba(242,107,79,.9)}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:#fff;color:var(--lagoon)}
+.btn-line{border-color:var(--lagoon);color:var(--lagoon)}
+.btn-line:hover{background:var(--lagoon);color:#fff}
+.btn i{transition:transform .35s var(--ease)}
+.btn:hover i.fa-arrow-right{transform:translateX(4px)}
+
+/* Nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,box-shadow .4s,padding .4s;padding:20px 0}
+.nav.solid{background:rgba(251,246,238,.94);backdrop-filter:blur(12px);box-shadow:0 6px 30px -18px rgba(13,58,66,.5);padding:12px 0}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.logo{display:flex;align-items:center;gap:.6rem;font-family:var(--head);font-weight:800;font-size:1.45rem;color:#fff;transition:color .4s}
+.logo .mark{width:40px;height:40px;border-radius:50%;background:var(--bloom);display:grid;place-items:center;color:#fff;font-size:1rem;transition:transform .6s var(--ease)}
+.logo:hover .mark{transform:rotate(90deg)}
+.nav.solid .logo{color:var(--lagoon)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{color:#fff;font-weight:600;position:relative;transition:color .3s}
+.nav.solid .nav-links a{color:var(--ink)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:100%;background:var(--bloom);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
+.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
+.nav-cta{display:flex;align-items:center;gap:1rem}
+.nav-cta .btn{padding:.7rem 1.25rem}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.18);color:#fff;font-size:1.1rem;cursor:pointer;transition:background .3s,color .3s}
+.nav.solid .burger{background:var(--sand-2);color:var(--lagoon)}
+.mobile-menu{position:fixed;inset:0;background:var(--lagoon);z-index:60;display:flex;flex-direction:column;justify-content:center;padding:0 8vw;gap:1.2rem;clip-path:circle(0% at calc(100% - 44px) 44px);transition:clip-path .6s var(--ease);visibility:hidden}
+.mobile-menu.open{clip-path:circle(150% at calc(100% - 44px) 44px);visibility:visible}
+.mobile-menu a{color:#fff;font-family:var(--head);font-size:2.2rem;font-weight:800}
+.mobile-menu a:hover{color:var(--glow)}
+.mobile-menu .close{position:absolute;top:22px;right:4vw;width:46px;height:46px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:1.2rem;cursor:pointer}
+
+/* Hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;padding:140px 0 150px;color:#fff;overflow:hidden;isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:heroZoom 14s var(--ease) forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(100deg,rgba(9,40,46,.88) 0%,rgba(9,40,46,.62) 42%,rgba(9,40,46,.15) 75%),linear-gradient(0deg,rgba(9,40,46,.7),transparent 45%)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:3rem;align-items:end}
+.hero-tag{display:inline-flex;align-items:center;gap:.6rem;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(8px);padding:.45rem 1rem;border-radius:999px;font-weight:600;font-size:.9rem}
+.hero-tag .stars{color:var(--glow)}
+.hero h1{font-size:clamp(2.9rem,7.4vw,6.2rem);font-weight:800;margin:1.2rem 0 1.2rem}
+.hero h1 em{font-style:normal;color:var(--glow);position:relative;white-space:nowrap}
+.hero h1 em i{font-size:.42em;vertical-align:super;color:var(--bloom);margin-left:.1em;display:inline-block;animation:spin 9s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero p.sub{font-size:1.15rem;max-width:540px;color:rgba(255,255,255,.88)}
+.hero-actions{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap}
+.price-card{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(14px);border-radius:var(--r-lg);padding:1.6rem;max-width:340px;justify-self:end}
+.price-card .from{font-size:.85rem;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.12em;font-weight:700}
+.price-card .amt{font-family:var(--head);font-size:3.4rem;font-weight:800;line-height:1}
+.price-card .amt small{font-size:1rem;font-weight:600;opacity:.8}
+.price-card ul{list-style:none;margin:1rem 0 0;display:grid;gap:.55rem}
+.price-card li{display:flex;gap:.7rem;align-items:center;font-size:.95rem}
+.price-card li i{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;font-size:.8rem;color:var(--glow)}
+
+/* Quick check bar */
+.quick{position:relative;z-index:5;margin-top:-62px}
+.quick form{background:#fff;border-radius:24px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr auto;gap:0;padding:10px;align-items:stretch}
+.qf{padding:.7rem 1.2rem;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;border-radius:16px;transition:background .3s}
+.qf:hover{background:var(--sand)}
+.qf:nth-child(4){border-right:0}
+.qf label{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:flex;gap:.45rem;align-items:center}
+.qf label i{color:var(--pool)}
+.qf input,.qf select{border:0;background:transparent;font-weight:700;font-size:1rem;padding:.25rem 0;outline:none;width:100%;cursor:pointer}
+.quick .btn{border-radius:16px;padding:0 2rem}
+
+/* Stats */
+.stats{padding:70px 0 0}
+.stat-row{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.stat{background:#fff;border-radius:var(--r-md);padding:1.4rem 1.2rem;display:flex;gap:1rem;align-items:center;border:1px solid var(--line);transition:transform .4s var(--ease),border-color .3s,box-shadow .4s var(--ease)}
+.stat:hover{transform:translateY(-4px);border-color:transparent;box-shadow:var(--shadow)}
+.stat i{width:48px;height:48px;flex:none;border-radius:14px;display:grid;place-items:center;font-size:1.15rem;background:var(--pool-soft);color:var(--lagoon-2)}
+.stat:nth-child(2) i{background:var(--bloom-soft);color:var(--bloom-dark)}
+.stat:nth-child(3) i{background:var(--palm-soft);color:var(--palm)}
+.stat:nth-child(4) i{background:#FCF1D3;color:#9A6B00}
+.stat b{font-family:var(--head);font-size:1.5rem;display:block;line-height:1.1}
+.stat span{font-size:.85rem;color:var(--muted)}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px}
+.g-item{position:relative;border-radius:var(--r-md);overflow:hidden;cursor:zoom-in;background:var(--sand-2);border:0;padding:0}
+.g-item:first-child{grid-column:span 2;grid-row:span 2}
+.g-item:nth-child(6){grid-column:span 2}
+.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease),filter .5s}
+.g-item::after{content:"\f065";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;background:rgba(255,255,255,.92);color:var(--lagoon);display:grid;place-items:center;opacity:0;transform:scale(.6);transition:opacity .35s,transform .45s var(--ease)}
+.g-item:hover img{transform:scale(1.07)}
+.g-item:hover::after{opacity:1;transform:scale(1)}
+.g-count{position:absolute;left:16px;top:16px;background:rgba(13,58,66,.75);color:#fff;font-size:.8rem;font-weight:700;padding:.35rem .8rem;border-radius:999px;backdrop-filter:blur(6px)}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;z-index:80;background:rgba(6,26,30,.94);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .4s,visibility .4s}
+.lightbox.open{opacity:1;visibility:visible}
+.lightbox img{max-width:88vw;max-height:80vh;border-radius:var(--r-md);object-fit:contain;transform:scale(.94);transition:transform .5s var(--ease),opacity .3s}
+.lightbox.open img{transform:scale(1)}
+.lb-btn{position:absolute;width:54px;height:54px;border-radius:50%;border:0;background:rgba(255,255,255,.12);color:#fff;font-size:1.1rem;cursor:pointer;transition:background .3s,transform .3s var(--ease)}
+.lb-btn:hover{background:var(--bloom);transform:scale(1.06)}
+.lb-prev{left:3vw}.lb-next{right:3vw}.lb-close{top:22px;right:3vw}
+.lb-count{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:#fff;font-weight:700;letter-spacing:.1em}
+
+/* Features (bento) */
+.features{background:var(--lagoon);color:#fff;border-radius:48px;margin:0 2vw;position:relative;overflow:hidden}
+.features::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(24,162,181,.35),transparent 65%);top:-180px;right:-160px;pointer-events:none}
+.features .eyebrow{color:var(--glow)}
+.features .lead{color:rgba(255,255,255,.75)}
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(180px,auto);gap:16px;position:relative}
+.tile{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:1.7rem;display:flex;flex-direction:column;justify-content:space-between;gap:1.2rem;transition:transform .45s var(--ease),background .35s,border-color .35s}
+.tile:hover{transform:translateY(-6px);background:rgba(255,255,255,.1);border-color:rgba(244,194,78,.5)}
+.tile .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;font-size:1.3rem;background:rgba(255,255,255,.1);color:var(--glow);transition:transform .5s var(--ease)}
+.tile:hover .ic{transform:rotate(-8deg) scale(1.08)}
+.tile h3{font-size:1.35rem;font-weight:700;margin-bottom:.35rem}
+.tile p{color:rgba(255,255,255,.72);font-size:.95rem}
+.tile.big{grid-column:span 2;grid-row:span 2;background:linear-gradient(150deg,var(--pool) 0%,#0F7383 100%);border:0}
+.tile.big .ic{background:rgba(255,255,255,.2);color:#fff}
+.tile.big h3{font-size:2.1rem}
+.tile.big p{color:rgba(255,255,255,.9);font-size:1.05rem}
+.tile.big .facts{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1rem}
+.tile.big .facts span{background:rgba(255,255,255,.18);padding:.4rem .9rem;border-radius:999px;font-size:.85rem;font-weight:600}
+.tile.wide{grid-column:span 2}
+.tile.bloom{background:var(--bloom);border:0}
+.tile.bloom .ic{background:rgba(255,255,255,.2);color:#fff}
+.tile.bloom p{color:rgba(255,255,255,.9)}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem}
+.chips span{display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:.4rem .85rem;border-radius:999px;font-size:.85rem}
+.chips i{color:var(--glow)}
+
+/* Occasions */
+.occasions{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.occ{display:flex;align-items:center;gap:1.1rem;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:1.3rem 1.4rem;cursor:pointer;text-align:left;transition:transform .4s var(--ease),border-color .3s,box-shadow .4s var(--ease),background .3s}
+.occ .ic{width:56px;height:56px;flex:none;border-radius:50%;display:grid;place-items:center;font-size:1.25rem;background:var(--bloom-soft);color:var(--bloom-dark);transition:background .35s,color .35s,transform .5s var(--ease)}
+.occ b{font-family:var(--head);font-size:1.2rem;display:block}
+.occ span{font-size:.9rem;color:var(--muted)}
+.occ .go{margin-left:auto;color:var(--muted);transition:transform .35s var(--ease),color .3s}
+.occ:hover{transform:translateY(-4px);border-color:var(--bloom);box-shadow:var(--shadow)}
+.occ:hover .ic{background:var(--bloom);color:#fff;transform:rotate(-10deg)}
+.occ:hover .go{transform:translateX(5px);color:var(--bloom)}
+
+/* Reviews */
+.reviews-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:start}
+.score{background:var(--glow);border-radius:var(--r-lg);padding:2.2rem;position:sticky;top:110px}
+.score .num{font-family:var(--head);font-size:5.5rem;font-weight:800;line-height:1;color:var(--lagoon)}
+.score .stars{color:var(--lagoon);font-size:1.1rem;margin:.4rem 0 .6rem;display:flex;gap:.2rem}
+.score p{color:var(--lagoon);font-weight:600}
+.score ul{list-style:none;margin-top:1.4rem;display:grid;gap:.6rem}
+.score li{display:flex;gap:.6rem;align-items:center;color:var(--lagoon);font-weight:600;font-size:.95rem}
+.review-list{display:grid;gap:18px}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:2rem;position:relative;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.review:hover{transform:translateX(6px);box-shadow:var(--shadow)}
+.review .q{position:absolute;top:1.4rem;right:1.6rem;font-size:2.4rem;color:var(--pool-soft)}
+.review p{font-size:1.12rem;margin:.9rem 0 1.3rem}
+.review .who{display:flex;align-items:center;gap:.9rem}
+.avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-family:var(--head);color:#fff;background:var(--palm);flex:none;overflow:hidden}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.review .who b{display:block}
+.review .who span{font-size:.88rem;color:var(--muted)}
+.review .tag{display:inline-flex;gap:.4rem;align-items:center;font-size:.8rem;font-weight:700;color:var(--palm);background:var(--palm-soft);padding:.3rem .75rem;border-radius:999px}
+.review .rs{color:var(--glow);font-size:.85rem;margin-left:auto}
+
+/* Host */
+.host{background:var(--sand-2)}
+.host-card{display:grid;grid-template-columns:auto 1fr auto;gap:2.5rem;align-items:center;background:#fff;border-radius:36px;padding:2.6rem;box-shadow:var(--shadow)}
+.host-photo{position:relative;width:150px;height:150px}
+.host-photo .avatar{width:150px;height:150px;font-size:3rem;background:var(--bloom)}
+.host-photo .badge{position:absolute;bottom:4px;right:4px;width:42px;height:42px;border-radius:50%;background:var(--pool);color:#fff;display:grid;place-items:center;border:4px solid #fff}
+.host-card h3{font-size:2rem;font-weight:800;margin:.4rem 0 .6rem}
+.host-card p{color:var(--muted);max-width:560px}
+.host-meta{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.1rem}
+.host-meta span{display:inline-flex;align-items:center;gap:.45rem;background:var(--sand);padding:.45rem .9rem;border-radius:999px;font-size:.88rem;font-weight:600}
+.host-meta i{color:var(--pool)}
+.extras{display:grid;gap:.7rem;min-width:240px}
+.extras b{font-family:var(--head);font-size:1.05rem}
+.extras div{display:flex;gap:.7rem;align-items:center;font-weight:600;font-size:.95rem}
+.extras i{width:36px;height:36px;border-radius:12px;background:var(--bloom-soft);color:var(--bloom-dark);display:grid;place-items:center;font-size:.9rem}
+
+/* Booking */
+.book-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:start}
+.book-form{background:#fff;border-radius:32px;padding:2.2rem;border:1px solid var(--line)}
+.f-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.f-row.three{grid-template-columns:1fr 1fr 1fr}
+.field label{display:block;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.4rem}
+.field input,.field select,.field textarea{width:100%;padding:.85rem 1rem;border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--sand);transition:border-color .3s,background .3s,box-shadow .3s;outline:none}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--pool);background:#fff;box-shadow:0 0 0 4px rgba(24,162,181,.15)}
+.field textarea{resize:vertical;min-height:84px}
+.field.err input,.field.err select{border-color:var(--bloom);background:var(--bloom-soft)}
+.field small.msg{display:none;color:var(--bloom-dark);font-weight:600;font-size:.8rem;margin-top:.3rem}
+.field.err small.msg{display:block}
+.stepper{display:flex;align-items:center;border:1.5px solid var(--line);border-radius:var(--r-sm);background:var(--sand);overflow:hidden}
+.stepper button{width:46px;height:48px;border:0;background:transparent;cursor:pointer;color:var(--lagoon);transition:background .25s,color .25s}
+.stepper button:hover{background:var(--lagoon);color:#fff}
+.stepper button:disabled{opacity:.35;pointer-events:none}
+.stepper output{flex:1;text-align:center;font-weight:800;font-family:var(--head);font-size:1.1rem}
+.type-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:14px}
+.type-chips input{position:absolute;opacity:0;pointer-events:none}
+.type-chips label{display:inline-flex;align-items:center;gap:.45rem;padding:.55rem 1rem;border-radius:999px;border:1.5px solid var(--line);font-weight:600;font-size:.9rem;cursor:pointer;transition:all .3s var(--ease);background:var(--sand)}
+.type-chips label:hover{border-color:var(--bloom);color:var(--bloom-dark)}
+.type-chips input:checked+label{background:var(--lagoon);border-color:var(--lagoon);color:#fff}
+.type-chips input:focus-visible+label{outline:3px solid var(--glow);outline-offset:2px}
+.addon{display:flex;align-items:center;gap:1rem;padding:1rem 1.1rem;border:1.5px dashed var(--line);border-radius:var(--r-md);margin-bottom:14px;cursor:pointer;transition:border-color .3s,background .3s}
+.addon:hover{border-color:var(--pool)}
+.addon input{position:absolute;opacity:0}
+.addon .box{width:26px;height:26px;border-radius:8px;border:2px solid var(--line);display:grid;place-items:center;color:transparent;transition:all .3s;flex:none}
+.addon input:checked~.box{background:var(--pool);border-color:var(--pool);color:#fff}
+.addon:has(input:checked){border-style:solid;border-color:var(--pool);background:var(--pool-soft)}
+.addon input:focus-visible~.box{outline:3px solid var(--glow);outline-offset:2px}
+.addon b{display:block}
+.addon span.s{font-size:.88rem;color:var(--muted)}
+.addon .p{margin-left:auto;font-weight:800;font-family:var(--head)}
+.f-label{font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem;display:block}
+.summary{background:var(--lagoon);color:#fff;border-radius:32px;padding:2rem;position:sticky;top:100px;overflow:hidden}
+.summary::after{content:"\f5bb";font-family:"Font Awesome 6 Free";font-weight:900;position:absolute;right:-30px;bottom:-40px;font-size:11rem;color:rgba(255,255,255,.05);pointer-events:none}
+.summary h3{font-size:1.5rem;margin-bottom:1.2rem}
+.sum-line{display:flex;justify-content:space-between;padding:.75rem 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:.95rem;gap:1rem}
+.sum-line span{color:rgba(255,255,255,.7)}
+.sum-line b{text-align:right}
+.sum-total{display:flex;justify-content:space-between;align-items:baseline;margin:1.3rem 0 .4rem}
+.sum-total b{font-family:var(--head);font-size:2.6rem;font-weight:800;color:var(--glow);transition:transform .3s var(--ease)}
+.sum-total b.bump{transform:scale(1.08)}
+.summary small{color:rgba(255,255,255,.6);display:block;margin-bottom:1.3rem}
+.summary .btn{width:100%}
+.assure{display:grid;gap:.6rem;margin-top:1.3rem;font-size:.88rem;color:rgba(255,255,255,.8)}
+.assure div{display:flex;gap:.6rem;align-items:center}
+.assure i{color:var(--glow)}
+.success{display:none;text-align:center;padding:2rem 1rem}
+.success .ok{width:84px;height:84px;border-radius:50%;background:var(--palm-soft);color:var(--palm);display:grid;place-items:center;font-size:2rem;margin:0 auto 1.2rem;animation:pop .6s var(--ease)}
+@keyframes pop{0%{transform:scale(.3);opacity:0}70%{transform:scale(1.1)}100%{transform:scale(1);opacity:1}}
+.success h3{font-size:1.8rem;margin-bottom:.6rem}
+.success p{color:var(--muted);max-width:420px;margin:0 auto 1.4rem}
+
+/* Good to know */
+.know-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:1.6rem}
+.rule{display:flex;gap:.8rem;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:var(--r-md);padding:1rem 1.1rem;font-size:.95rem}
+.rule i{color:var(--bloom-dark);margin-top:.25rem}
+.rule.ok i{color:var(--palm)}
+.faq{margin-top:1.6rem;display:grid;gap:10px}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;transition:border-color .3s}
+.faq details[open]{border-color:var(--pool)}
+.faq summary{list-style:none;cursor:pointer;padding:1.1rem 1.3rem;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary i{width:30px;height:30px;border-radius:50%;background:var(--sand);display:grid;place-items:center;font-size:.8rem;transition:transform .4s var(--ease),background .3s,color .3s;flex:none}
+.faq details[open] summary i{transform:rotate(45deg);background:var(--pool);color:#fff}
+.faq .ans{padding:0 1.3rem 1.2rem;color:var(--muted)}
+
+/* CTA band */
+.cta-band{padding:0 0 110px}
+.cta-inner{background:linear-gradient(120deg,var(--bloom) 0%,#F58A5E 100%);border-radius:40px;padding:3.2rem;display:flex;align-items:center;justify-content:space-between;gap:2rem;color:#fff;flex-wrap:wrap;position:relative;overflow:hidden}
+.cta-inner::before{content:"";position:absolute;width:300px;height:300px;border-radius:50%;border:40px solid rgba(255,255,255,.1);right:18%;top:-150px}
+.cta-inner h2{font-size:clamp(1.8rem,3.6vw,2.8rem);max-width:620px}
+.cta-inner .btn{background:#fff;color:var(--bloom-dark)}
+.cta-inner .btn:hover{background:var(--lagoon);color:#fff;transform:translateY(-2px)}
+
+/* Footer */
+footer{background:var(--lagoon);color:rgba(255,255,255,.75);padding:80px 0 30px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem}
+footer .logo{color:#fff;margin-bottom:1rem}
+footer h4{color:#fff;font-family:var(--head);font-size:1.1rem;margin-bottom:1rem}
+footer ul{list-style:none;display:grid;gap:.6rem}
+footer a{transition:color .3s,padding .3s}
+footer ul a:hover{color:var(--glow);padding-left:4px}
+footer li{display:flex;gap:.6rem;align-items:center}
+footer li i{color:var(--glow);width:16px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:3rem;padding-top:1.6rem;text-align:center;font-size:.9rem}
+
+/* Mobile sticky bar */
+.m-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;background:#fff;border-radius:20px;box-shadow:0 14px 40px -12px rgba(13,58,66,.45);display:none;align-items:center;justify-content:space-between;padding:.7rem .7rem .7rem 1.2rem;transform:translateY(130%);transition:transform .5s var(--ease)}
+.m-bar.show{transform:none}
+.m-bar b{font-family:var(--head);font-size:1.3rem}
+.m-bar span{font-size:.82rem;color:var(--muted);display:block}
+.m-bar .btn{padding:.75rem 1.3rem}
+
+/* Back to top */
+.to-top{position:fixed;right:22px;bottom:22px;z-index:40;width:50px;height:50px;border-radius:50%;border:0;background:var(--lagoon);color:#fff;cursor:pointer;opacity:0;transform:translateY(20px);transition:opacity .4s,transform .4s var(--ease),background .3s;pointer-events:none}
+.to-top.show{opacity:1;transform:none;pointer-events:auto}
+.to-top:hover{background:var(--bloom)}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.08s}.reveal.d2{transition-delay:.16s}.reveal.d3{transition-delay:.24s}.reveal.d4{transition-delay:.32s}
+
+/* ===== Responsive ===== */
+.stat>div,.book-grid>*,.book-form,#formBody{min-width:0}
+@media (hover:none){.g-item::after{opacity:1;transform:scale(.85)}}
+
+/* Large desktop */
+@media (min-width:1600px){
+  .wrap{width:min(1360px,90vw)}
+  .gallery-grid{grid-auto-rows:270px}
+}
+
+/* Small laptop / iPad landscape */
+@media (max-width:1180px){
+  .nav-links{gap:1.4rem}
+  .hero-grid{gap:2rem}
+  .bento{grid-template-columns:repeat(3,1fr)}
+  .tile.big{grid-column:span 2}
+  .tile.wide{grid-column:span 3}
+  .tile.wide:last-child{grid-column:span 2}
+  .book-form{padding:1.8rem}
+}
+@media (max-width:1080px){
+  .stat-row{grid-template-columns:repeat(6,1fr)}
+  .stat{grid-column:span 2}
+  .stat:nth-child(4),.stat:nth-child(5){grid-column:span 3}
+  .bento{grid-template-columns:repeat(2,1fr)}
+  .tile.big,.tile.wide,.tile.wide:last-child{grid-column:span 2}
+  .tile.big{grid-row:span 1}
+  .occasions{grid-template-columns:repeat(2,1fr)}
+  .host-card{grid-template-columns:auto 1fr;gap:2rem}
+  .extras{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.7rem 1.6rem;align-items:center;padding-top:1.4rem;border-top:1px solid var(--line)}
+  .extras b{width:100%}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .book-grid{grid-template-columns:1fr 330px;gap:20px}
+  .f-row.three{grid-template-columns:1fr 1fr}
+  .f-row.three .field:first-child{grid-column:1/-1}
+  .reviews-wrap{gap:2rem}
+}
+
+/* iPad portrait and small tablets */
+@media (max-width:900px){
+  section{padding:84px 0}
+  .nav-links,.nav-cta .btn{display:none}
+  .burger{display:grid;place-items:center}
+  .hero{min-height:auto;padding:150px 0 130px}
+  .hero-grid{grid-template-columns:1fr;gap:2rem}
+  .hero p.sub{max-width:620px}
+  .price-card{justify-self:stretch;max-width:none;width:100%;display:flex;align-items:center;flex-wrap:wrap;gap:1rem 2.2rem;padding:1.3rem 1.6rem}
+  .price-card .amt{font-size:2.8rem}
+  .price-card ul{margin:0;display:flex;flex-wrap:wrap;gap:.6rem 1.4rem}
+  .quick form{grid-template-columns:1fr 1fr}
+  .qf{border-right:0;border-bottom:1px solid var(--line)}
+  .qf:nth-child(3),.qf:nth-child(4){border-bottom:0}
+  .quick .btn{grid-column:1/-1;padding:1rem;margin-top:8px}
+  .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:210px}
+  .g-item:nth-child(6){grid-column:span 1}
+  .features{margin:0 12px;border-radius:32px}
+  .reviews-wrap,.book-grid,.know-grid{grid-template-columns:1fr}
+  .know-grid{gap:3rem}
+  .score{position:static;display:grid;grid-template-columns:auto 1fr;gap:0 1.6rem;align-items:center}
+  .score .num{grid-row:span 3}
+  .score ul{grid-column:1/-1;grid-template-columns:repeat(3,auto);justify-content:start;gap:.6rem 1.4rem}
+  .summary{position:relative;top:auto}
+  .m-bar{display:flex}
+  .to-top{bottom:96px}
+  footer{padding-bottom:110px}
+  .sec-head{margin-bottom:36px}
+}
+
+/* Phones */
+@media (max-width:600px){
+  section{padding:68px 0}
+  .wrap{width:calc(100% - 32px)}
+  h2{font-size:clamp(1.8rem,8vw,2.3rem)}
+  .lead{font-size:1rem}
+  .hero{padding:118px 0 112px}
+  .hero h1{margin:1rem 0}
+  .hero p.sub{font-size:1.02rem}
+  .hero-tag{font-size:.8rem}
+  .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+  .hero-actions .btn{padding:.9rem .8rem;font-size:.92rem}
+  .price-card{padding:1.1rem 1.2rem;gap:.8rem 1.2rem;border-radius:22px}
+  .price-card .amt{font-size:2.3rem}
+  .price-card ul{display:grid;gap:.45rem}
+  .price-card li{font-size:.88rem}
+  .price-card li i{width:26px;height:26px}
+  .quick{margin-top:-56px}
+  .quick form{border-radius:20px;padding:8px}
+  .qf{padding:.6rem .8rem}
+  .qf input,.qf select{font-size:.95rem}
+  .stats{padding-top:44px}
+  .stat-row{grid-template-columns:1fr 1fr;gap:10px}
+  .stat,.stat:nth-child(4){grid-column:span 1}
+  .stat:nth-child(5){grid-column:span 2}
+  .stat{padding:1rem;gap:.75rem}
+  .stat i{width:40px;height:40px;font-size:1rem;border-radius:12px}
+  .stat b{font-size:1.2rem}
+  .stat span{font-size:.8rem}
+  .gallery-grid{grid-auto-rows:150px;gap:10px}
+  .g-item{border-radius:14px}
+  .g-item::after{width:34px;height:34px;right:10px;bottom:10px;font-size:.8rem}
+  .features{margin:0 8px;border-radius:26px}
+  .bento,.occasions,.rules{grid-template-columns:1fr}
+  .tile.big,.tile.wide,.tile.wide:last-child{grid-column:span 1}
+  .tile{padding:1.4rem;flex-direction:row;align-items:flex-start;justify-content:flex-start}
+  .tile .ic{flex:none;width:48px;height:48px;font-size:1.1rem}
+  .tile.big{flex-direction:column}
+  .tile.big h3{font-size:1.7rem}
+  .occ{padding:1rem 1.1rem}
+  .occ .ic{width:48px;height:48px;font-size:1.1rem}
+  .score{grid-template-columns:1fr;padding:1.6rem}
+  .score .num{grid-row:auto;font-size:4.2rem}
+  .score ul{grid-template-columns:1fr}
+  .review{padding:1.4rem}
+  .review p{font-size:1rem}
+  .review .who{flex-wrap:wrap}
+  .review .rs{width:100%;margin:.2rem 0 0 calc(48px + .9rem)}
+  .faq summary{padding:1rem 1.1rem}
+  .rule{padding:.9rem 1rem}
+  .host-card{grid-template-columns:1fr;padding:1.6rem;gap:1.2rem;border-radius:26px}
+  .host-photo,.host-photo .avatar{width:96px;height:96px;font-size:2.2rem}
+  .host-photo .badge{width:34px;height:34px;font-size:.8rem;bottom:0;right:0}
+  .host-card h3{font-size:1.6rem}
+  .host-meta span{font-size:.82rem}
+  .extras{gap:.6rem 1.2rem}
+  .book-form{padding:1.2rem;border-radius:24px}
+  .type-chips{flex-wrap:nowrap;overflow-x:auto;margin:0 -1.2rem 14px;padding:0 1.2rem 6px;scrollbar-width:none;scroll-snap-type:x proximity}
+  .type-chips::-webkit-scrollbar{display:none}
+  .type-chips label{flex:none;scroll-snap-align:start}
+  .f-row{grid-template-columns:1fr 1fr;gap:12px}
+  .f-row .field:has(input[type=email]),.f-row .field:has(input[type=tel]),.f-row .field:has(#bName){grid-column:1/-1}
+  .f-row:has(#bName){grid-template-columns:1fr}
+  .field input,.field select,.field textarea{font-size:16px}
+  .addon{gap:.8rem;padding:.9rem}
+  .addon>span:nth-of-type(2){flex:1;min-width:0}
+  .bento{grid-auto-rows:auto}
+  .sec-head h2 br{display:none}
+  .summary{padding:1.5rem;border-radius:24px}
+  .sum-total b{font-size:2.2rem}
+  .know-grid{gap:2.5rem}
+  .cta-band{padding-bottom:68px}
+  .cta-inner{padding:2rem 1.5rem;border-radius:26px}
+  .cta-inner .btn{width:100%}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:2rem 1.5rem}
+  .foot-grid>div:first-child{grid-column:1/-1}
+  .lightbox img{max-width:94vw;max-height:70vh}
+  .lb-prev,.lb-next{top:auto;bottom:18px;width:48px;height:48px}
+  .lb-prev{left:18px}.lb-next{right:18px}
+  .lb-count{bottom:32px}
+}
+
+/* Small phones */
+@media (max-width:380px){
+  .hero h1{font-size:2.5rem}
+  .hero-actions{grid-template-columns:1fr}
+  .quick form{grid-template-columns:1fr}
+  .qf{border-bottom:1px solid var(--line)!important}
+  .qf:nth-child(4){border-bottom:0!important}
+  .stat-row{grid-template-columns:1fr}
+  .stat:nth-child(5){grid-column:span 1}
+  .f-row{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .m-bar b{font-size:1.1rem}
+}
+
+/* Short landscape phones */
+@media (max-height:500px) and (orientation:landscape){
+  .hero{min-height:auto;padding:110px 0 110px}
+  .mobile-menu{gap:.6rem}
+  .mobile-menu a{font-size:1.4rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Bloom House home"><span class="mark"><i class="fa-solid fa-spa"></i></span>Bloom House</a>
+    <ul class="nav-links">
+      <li><a href="#gallery">Photos</a></li>
+      <li><a href="#space">The Space</a></li>
+      <li><a href="#occasions">Events</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#know">Good to Know</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#book" class="btn btn-bloom"><i class="fa-regular fa-calendar-check"></i>Book Now</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile menu">
+  <button class="close" id="menuClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#gallery">Photos</a>
+  <a href="#space">The Space</a>
+  <a href="#occasions">Events</a>
+  <a href="#reviews">Reviews</a>
+  <a href="#know">Good to Know</a>
+  <a href="#book" class="btn btn-bloom" style="font-size:1.1rem;font-family:var(--body);margin-top:1rem;align-self:flex-start">Book Your Date</a>
+</nav>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><img src="https://giggster.com/images/location/494a57d3-7d9f-4233-bcae-0918da20ced8/92e4f2b0-6ac9-4a74-ae58-f80911cff56c.jpg?width=2000&height=1250&fit=crop&format=jpg" alt="Bloom House poolside backyard in Orlando"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-tag reveal"><span class="stars"><i class="fa-solid fa-star"></i> 5.0</span> Loved by every guest &middot; Orlando, FL</span>
+      <h1 class="reveal d1">Where your moments <em>blossom<i class="fa-solid fa-spa"></i></em></h1>
+      <p class="sub reveal d2">A private, family friendly pool backyard in the heart of Orlando. Pool, pergola, fire pits, kitchen and string lights, ready for your birthday, quinceañera, shower or wedding.</p>
+      <div class="hero-actions reveal d3">
+        <a href="#book" class="btn btn-bloom">Check your date <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#gallery" class="btn btn-ghost"><i class="fa-regular fa-images"></i>See the photos</a>
+      </div>
+    </div>
+    <aside class="price-card reveal d4" aria-label="Pricing summary">
+      <div class="from">From</div>
+      <div class="amt">$90<small> / hour</small></div>
+      <ul>
+        <li><i class="fa-solid fa-clock"></i>4 hour minimum</li>
+        <li><i class="fa-solid fa-users"></i>Up to 45 guests</li>
+        <li><i class="fa-solid fa-bolt"></i>Instant booking available</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- QUICK CHECK -->
+<div class="quick">
+  <div class="wrap">
+    <form id="quickForm" aria-label="Quick booking check">
+      <div class="qf"><label for="qDate"><i class="fa-regular fa-calendar"></i>Event date</label><input type="date" id="qDate" required></div>
+      <div class="qf"><label for="qType"><i class="fa-solid fa-champagne-glasses"></i>Occasion</label>
+        <select id="qType">
+          <option>Birthday</option><option>Quinceañera</option><option>Wedding</option><option>Baby Shower</option><option>Gender Reveal</option><option>Family Reunion</option><option>Photo / Video Shoot</option><option>Other</option>
+        </select></div>
+      <div class="qf"><label for="qGuests"><i class="fa-solid fa-user-group"></i>Guests</label>
+        <select id="qGuests"><option value="15">Up to 15</option><option value="25" selected>Up to 25</option><option value="35">Up to 35</option><option value="45">Up to 45</option></select></div>
+      <div class="qf"><label for="qHours"><i class="fa-regular fa-clock"></i>Hours</label>
+        <select id="qHours"><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>10</option><option>12</option></select></div>
+      <button class="btn btn-bloom" type="submit">Continue <i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap stat-row">
+    <div class="stat reveal"><i class="fa-solid fa-person-swimming"></i><div><b>17,000</b><span>gallon pool</span></div></div>
+    <div class="stat reveal d1"><i class="fa-solid fa-users"></i><div><b>45</b><span>guests max</span></div></div>
+    <div class="stat reveal d2"><i class="fa-solid fa-vector-square"></i><div><b>2,500</b><span>sq ft of space</span></div></div>
+    <div class="stat reveal d3"><i class="fa-solid fa-square-parking"></i><div><b>25</b><span>parking spots</span></div></div>
+    <div class="stat reveal d4"><i class="fa-solid fa-moon"></i><div><b>Day &amp; Night</b><span>lit for evening events</span></div></div>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow"><i class="fa-regular fa-images"></i>Photo tour</span>
+        <h2>Take a look around</h2>
+      </div>
+      <p class="lead reveal d1">Tap any photo to open it full screen. Use the arrows or swipe to walk through the whole backyard.</p>
+    </div>
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="space" class="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow"><i class="fa-solid fa-leaf"></i>The space</span>
+        <h2>Everything for the party, <br>already here</h2>
+      </div>
+      <p class="lead reveal d1">Bring the guests and the cake. The backyard is set up for swimming, eating, dancing and photos from afternoon until the lights come on.</p>
+    </div>
+    <div class="bento">
+      <div class="tile big reveal">
+        <span class="ic"><i class="fa-solid fa-water-ladder"></i></span>
+        <div>
+          <h3>The pool</h3>
+          <p>An in ground freshwater pool with steps in, sun loungers along the deck and pool toys and towels ready for the kids.</p>
+          <div class="facts"><span>17,000 gal</span><span>Steps in</span><span>Towels &amp; floats</span><span>Sun loungers</span></div>
+        </div>
+      </div>
+      <div class="tile reveal d1">
+        <span class="ic"><i class="fa-solid fa-fire"></i></span>
+        <div><h3>Two fire pits</h3><p>Cozy corners for when the sun goes down.</p></div>
+      </div>
+      <div class="tile reveal d2">
+        <span class="ic"><i class="fa-solid fa-utensils"></i></span>
+        <div><h3>Kitchen &amp; BBQ</h3><p>A fully equipped kitchen plus a barbecue setup outside.</p></div>
+      </div>
+      <div class="tile bloom reveal d1">
+        <span class="ic"><i class="fa-solid fa-camera-retro"></i></span>
+        <div><h3>Grass photo wall</h3><p>A ready made backdrop for family photos.</p></div>
+      </div>
+      <div class="tile reveal d2">
+        <span class="ic"><i class="fa-solid fa-house-chimney-window"></i></span>
+        <div><h3>Pergola &amp; porch</h3><p>Covered shade with indoor bathroom access.</p></div>
+      </div>
+      <div class="tile wide reveal">
+        <span class="ic"><i class="fa-solid fa-music"></i></span>
+        <div>
+          <h3>Room to play and dance</h3>
+          <div class="chips">
+            <span><i class="fa-solid fa-volume-high"></i>PA &amp; speakers</span>
+            <span><i class="fa-solid fa-compact-disc"></i>Bring your DJ</span>
+            <span><i class="fa-solid fa-futbol"></i>Mini soccer goals</span>
+            <span><i class="fa-solid fa-circle-dot"></i>Pool table</span>
+            <span><i class="fa-solid fa-wifi"></i>Wifi</span>
+            <span><i class="fa-regular fa-lightbulb"></i>Evening lighting</span>
+          </div>
+        </div>
+      </div>
+      <div class="tile wide reveal d1">
+        <span class="ic"><i class="fa-solid fa-car-side"></i></span>
+        <div><h3>Easy arrival</h3><p>25 parking spots on the property, room for a truck or motorhome, extra street parking nearby and street level access.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OCCASIONS -->
+<section id="occasions">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow"><i class="fa-solid fa-champagne-glasses"></i>Perfect for</span>
+        <h2>What are you celebrating?</h2>
+      </div>
+      <p class="lead reveal d1">Pick your occasion and we will take you straight to the booking form with it filled in.</p>
+    </div>
+    <div class="occasions">
+      <button class="occ reveal" data-type="Birthday"><span class="ic"><i class="fa-solid fa-cake-candles"></i></span><span><b>Birthdays</b><span>From first birthdays to big 40s</span></span><i class="fa-solid fa-arrow-right go"></i></button>
+      <button class="occ reveal d1" data-type="Quinceañera"><span class="ic"><i class="fa-solid fa-crown"></i></span><span><b>Quinceañeras</b><span>Dance floor under the lights</span></span><i class="fa-solid fa-arrow-right go"></i></button>
+      <button class="occ reveal d2" data-type="Wedding"><span class="ic"><i class="fa-solid fa-ring"></i></span><span><b>Weddings</b><span>Intimate garden ceremonies</span></span><i class="fa-solid fa-arrow-right go"></i></button>
+      <button class="occ reveal" data-type="Gender Reveal"><span class="ic"><i class="fa-solid fa-baby"></i></span><span><b>Showers &amp; Reveals</b><span>Baby showers and gender reveals</span></span><i class="fa-solid fa-arrow-right go"></i></button>
+      <button class="occ reveal d1" data-type="Family Reunion"><span class="ic"><i class="fa-solid fa-people-roof"></i></span><span><b>Family Reunions</b><span>BBQ, pool and fire pits</span></span><i class="fa-solid fa-arrow-right go"></i></button>
+      <button class="occ reveal d2" data-type="Photo / Video Shoot"><span class="ic"><i class="fa-solid fa-video"></i></span><span><b>Shoots &amp; Meetings</b><span>Production friendly backyard</span></span><i class="fa-solid fa-arrow-right go"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews" style="padding-top:0">
+  <div class="wrap reviews-wrap">
+    <div class="score reveal">
+      <div class="num">5.0</div>
+      <div class="stars" aria-label="5 out of 5 stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+      <p>Rated five stars by every guest who has booked.</p>
+      <ul>
+        <li><i class="fa-solid fa-check"></i>Clean and well maintained</li>
+        <li><i class="fa-solid fa-check"></i>Exactly as pictured</li>
+        <li><i class="fa-solid fa-check"></i>Attentive, kind host</li>
+      </ul>
+    </div>
+    <div>
+      <div class="reveal" style="margin-bottom:28px">
+        <span class="eyebrow"><i class="fa-regular fa-comment-dots"></i>Guest reviews</span>
+        <h2 style="margin-top:.6rem">Happy hosts, happy guests</h2>
+      </div>
+      <div class="review-list">
+        <article class="review reveal">
+          <i class="fa-solid fa-quote-right q"></i>
+          <span class="tag"><i class="fa-solid fa-baby"></i>Gender reveal</span>
+          <p>The space was absolutely beautiful, clean, well maintained, and exactly as pictured in the listing. Betiana was communicative, attentive, and so kind.</p>
+          <div class="who"><span class="avatar" style="background:var(--pool)">K</span><div><b>Katherine B.</b><span>Gender reveal party</span></div><span class="rs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></div>
+        </article>
+        <article class="review reveal d1">
+          <i class="fa-solid fa-quote-right q"></i>
+          <span class="tag"><i class="fa-solid fa-cake-candles"></i>First birthday</span>
+          <p>Betiana is a wonderful host and accommodated our baby girl's first birthday in her beautiful outdoor oasis. It was truly a pleasure, the space and the hospitality was unbelievable. Book this space for a perfect event!</p>
+          <div class="who"><span class="avatar"><img src="https://giggster.com/images/user/61937721-19fd-46c9-8421-ea2ff0e5d4f5/7e9ec9ec-315d-449c-986b-b92955a705c1.jpg?width=96&height=96&fit=crop&format=jpg" alt="" onerror="this.parentNode.textContent='J'"></span><div><b>Jessica M.</b><span>Birthday party, October 2025</span></div><span class="rs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span></div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOST -->
+<section class="host" id="host">
+  <div class="wrap">
+    <div class="host-card reveal">
+      <div class="host-photo">
+        <span class="avatar"><img src="https://static.giggster.com/images/user/04cbf57c-488b-4368-9e3b-86241423da91/b5b0c213-5855-4c43-804e-f1d5e594ff74/avatar_142.jpeg" alt="Betiana, host of Bloom House" onerror="this.parentNode.textContent='B'"></span>
+        <span class="badge" title="Verified host"><i class="fa-solid fa-check"></i></span>
+      </div>
+      <div>
+        <span class="eyebrow"><i class="fa-solid fa-hand-holding-heart"></i>Meet your host</span>
+        <h3>Hi, I'm Betiana</h3>
+        <p>Bloom House is a family run space, and I love helping families create unforgettable moments here. Tell me about your event and I will help you plan the day, from setup to the last song.</p>
+        <div class="host-meta">
+          <span><i class="fa-solid fa-reply"></i>Replies within a few hours</span>
+          <span><i class="fa-solid fa-thumbs-up"></i>High acceptance rate</span>
+          <span><i class="fa-solid fa-language"></i>English &amp; Español</span>
+        </div>
+      </div>
+      <div class="extras">
+        <b>Ask me about</b>
+        <div><i class="fa-solid fa-wand-magic-sparkles"></i>Decorations</div>
+        <div><i class="fa-solid fa-plate-wheat"></i>Tableware</div>
+        <div><i class="fa-solid fa-bowl-food"></i>Light catering</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="book">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="reveal">
+        <span class="eyebrow"><i class="fa-regular fa-calendar-check"></i>Book Bloom House</span>
+        <h2>Reserve your date</h2>
+      </div>
+      <p class="lead reveal d1">Send your request in under a minute. Your price updates as you go, and Betiana will confirm availability by email.</p>
+    </div>
+
+    <div class="book-grid">
+      <form class="book-form reveal" id="bookForm" novalidate>
+        <div id="formBody">
+          <span class="f-label">Occasion</span>
+          <div class="type-chips" id="typeChips"></div>
+
+          <div class="f-row three">
+            <div class="field"><label for="bDate">Date</label><input type="date" id="bDate" required><small class="msg">Pick a date from today on</small></div>
+            <div class="field"><label for="bStart">Start time</label>
+              <select id="bStart"></select></div>
+            <div class="field"><label>Hours (min 4)</label>
+              <div class="stepper"><button type="button" id="hMinus" aria-label="Fewer hours"><i class="fa-solid fa-minus"></i></button><output id="hOut">4</output><button type="button" id="hPlus" aria-label="More hours"><i class="fa-solid fa-plus"></i></button></div></div>
+          </div>
+
+          <div class="f-row">
+            <div class="field"><label>Guests (max 45)</label>
+              <div class="stepper"><button type="button" id="gMinus" aria-label="Fewer guests"><i class="fa-solid fa-minus"></i></button><output id="gOut">25</output><button type="button" id="gPlus" aria-label="More guests"><i class="fa-solid fa-plus"></i></button></div></div>
+            <div class="field"><label for="bName">Your name</label><input type="text" id="bName" autocomplete="name" placeholder="Full name" required><small class="msg">Please enter your name</small></div>
+          </div>
+
+          <div class="f-row">
+            <div class="field"><label for="bEmail">Email</label><input type="email" id="bEmail" autocomplete="email" placeholder="you@email.com" required><small class="msg">Enter a valid email</small></div>
+            <div class="field"><label for="bPhone">Phone</label><input type="tel" id="bPhone" autocomplete="tel" placeholder="(407) 000 0000" required><small class="msg">Enter a phone number</small></div>
+          </div>
+
+          <label class="addon">
+            <input type="checkbox" id="bClean">
+            <span class="box"><i class="fa-solid fa-check"></i></span>
+            <span><b>Cleaning service</b><span class="s">We handle the cleanup after your event</span></span>
+            <span class="p">+$100</span>
+          </label>
+
+          <div class="field" style="margin-bottom:0"><label for="bNotes">Anything else? (optional)</label><textarea id="bNotes" placeholder="Decorations, tableware, catering, setup time..."></textarea></div>
+        </div>
+
+        <div class="success" id="success" role="status" aria-live="polite">
+          <div class="ok"><i class="fa-solid fa-check"></i></div>
+          <h3>Request sent!</h3>
+          <p id="successText">Thank you. Betiana will confirm your date by email within a few hours.</p>
+          <button type="button" class="btn btn-line" id="newReq"><i class="fa-solid fa-rotate-left"></i>Make another request</button>
+        </div>
+      </form>
+
+      <aside class="summary reveal d1" aria-label="Booking summary">
+        <h3>Your event</h3>
+        <div class="sum-line"><span>Occasion</span><b id="sType">Birthday</b></div>
+        <div class="sum-line"><span>Date</span><b id="sDate">Choose a date</b></div>
+        <div class="sum-line"><span>Time</span><b id="sTime">2:00 PM to 6:00 PM</b></div>
+        <div class="sum-line"><span>Guests</span><b id="sGuests">25</b></div>
+        <div class="sum-line"><span id="sRateLbl">$90 × 4 hours</span><b id="sRate">$360</b></div>
+        <div class="sum-line" id="sCleanRow" style="display:none"><span>Cleaning</span><b>$100</b></div>
+        <div class="sum-total"><span>Estimated total</span><b id="sTotal">$360</b></div>
+        <small>Final price is confirmed by the host. No payment is taken now.</small>
+        <button type="submit" form="bookForm" class="btn btn-bloom" id="submitBtn"><i class="fa-regular fa-paper-plane"></i>Send booking request</button>
+        <div class="assure">
+          <div><i class="fa-solid fa-shield-heart"></i>Free cancellation within 24 hours</div>
+          <div><i class="fa-solid fa-location-dot"></i>Exact address shared after booking</div>
+          <div><i class="fa-solid fa-reply"></i>Host replies within a few hours</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- GOOD TO KNOW -->
+<section id="know" style="padding-top:0">
+  <div class="wrap know-grid">
+    <div>
+      <div class="reveal">
+        <span class="eyebrow"><i class="fa-solid fa-circle-info"></i>Good to know</span>
+        <h2 style="margin-top:.6rem">House rules</h2>
+      </div>
+      <div class="rules">
+        <div class="rule ok reveal"><i class="fa-solid fa-circle-check"></i>Families and kids welcome</div>
+        <div class="rule ok reveal d1"><i class="fa-solid fa-circle-check"></i>Bring your own music or DJ</div>
+        <div class="rule reveal"><i class="fa-solid fa-child-reaching"></i>Kids supervised by an adult in the pool</div>
+        <div class="rule reveal d1"><i class="fa-solid fa-paw"></i>No pets</div>
+        <div class="rule reveal"><i class="fa-solid fa-ban-smoking"></i>No smoking</div>
+        <div class="rule reveal d1"><i class="fa-solid fa-ban"></i>No illegal activities</div>
+        <div class="rule reveal"><i class="fa-solid fa-wine-glass"></i>Alcohol by agreement with host</div>
+        <div class="rule reveal d1"><i class="fa-solid fa-volume-low"></i>Keep music friendly to neighbors</div>
+      </div>
+    </div>
+    <div>
+      <div class="reveal">
+        <span class="eyebrow"><i class="fa-regular fa-circle-question"></i>FAQ</span>
+        <h2 style="margin-top:.6rem">Quick answers</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal"><summary>How does pricing work?<i class="fa-solid fa-plus"></i></summary><div class="ans">Bloom House is $90 per hour with a 4 hour minimum. Cleaning service is an optional $100 add on.</div></details>
+        <details class="reveal d1"><summary>Where exactly is Bloom House?<i class="fa-solid fa-plus"></i></summary><div class="ans">It is a private home in Orlando, FL. The exact address is shared with you once your booking is confirmed.</div></details>
+        <details class="reveal d2"><summary>What is the cancellation policy?<i class="fa-solid fa-plus"></i></summary><div class="ans">You get a full refund if you cancel within 24 hours of confirmation, as long as the event is more than 48 hours away. Any security deposit is returned 48 hours after your event.</div></details>
+        <details class="reveal d3"><summary>Can I bring food, a cake and decorations?<i class="fa-solid fa-plus"></i></summary><div class="ans">Yes. You can use the kitchen and BBQ area, and the host can also help with decorations, tableware and light catering on request.</div></details>
+        <details class="reveal d4"><summary>Is there a bathroom and parking?<i class="fa-solid fa-plus"></i></summary><div class="ans">Guests can use an indoor bathroom from the covered porch. There are 25 parking spots on the property plus street parking nearby.</div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-band">
+  <div class="wrap">
+    <div class="cta-inner reveal">
+      <h2>Weekends fill up fast. Lock in your celebration today.</h2>
+      <a href="#book" class="btn">Book Bloom House <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="logo"><span class="mark"><i class="fa-solid fa-spa"></i></span>Bloom House</a>
+        <p>A family run poolside oasis in Orlando for birthdays, quinceañeras, weddings, showers and reunions.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#gallery">Photos</a></li><li><a href="#space">The Space</a></li><li><a href="#occasions">Events</a></li><li><a href="#reviews">Reviews</a></li></ul>
+      </div>
+      <div>
+        <h4>Plan</h4>
+        <ul><li><a href="#book">Book a date</a></li><li><a href="#host">Meet the host</a></li><li><a href="#know">House rules</a></li><li><a href="#know">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><i class="fa-solid fa-location-dot"></i>Orlando, Florida</li>
+          <li><i class="fa-regular fa-clock"></i>Day and evening events</li>
+          <li><i class="fa-solid fa-tag"></i>From $90 per hour</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">&copy; <span id="yr"></span> Bloom House Orlando. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- Mobile booking bar -->
+<div class="m-bar" id="mBar"><div><b>$90/hr</b><span><i class="fa-solid fa-star" style="color:var(--glow)"></i> 5.0 &middot; 4 hr min</span></div><a href="#book" class="btn btn-bloom">Book Now</a></div>
+<button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="lb-btn lb-close" id="lbClose" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous photo"><i class="fa-solid fa-chevron-left"></i></button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-btn lb-next" id="lbNext" aria-label="Next photo"><i class="fa-solid fa-chevron-right"></i></button>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const $$ = s => [...document.querySelectorAll(s)];
+  const RATE = 90, CLEAN = 100, MIN_H = 4, MAX_H = 12, MAX_G = 45;
+
+  /* ---------- Photos ---------- */
+  const G = "https://giggster.com/images/location/494a57d3-7d9f-4233-bcae-0918da20ced8/";
+  const S = "https://swimply.imgix.net/thumbnails/";
+  const photos = [
+    {id:G+"92e4f2b0-6ac9-4a74-ae58-f80911cff56c.jpg", g:true},
+    {id:G+"aea74328-f74f-4de6-a59a-e84287df8c79.jpg", g:true},
+    {id:G+"bbc42e12-0a36-4e65-a4a9-4e41fafd45ab.jpg", g:true},
+    {id:G+"2898faad-afc7-41c8-843e-7a2af1be5699.jpg", g:true},
+    {id:S+"1760388216515-image.jpg"},
+    {id:S+"1760388220584-image.jpg"},
+    {id:S+"1760388217298-image.jpg"},
+    {id:S+"1760388216634-image.jpg"},
+    {id:S+"1760388216837-image.jpg"}
+  ];
+  const thumb = p => p.g ? p.id+"?width=1100&height=850&fit=crop&format=jpg" : p.id+"?auto=compress,format&fit=crop&w=1100&h=850&q=70";
+  const full  = p => p.g ? p.id+"?width=1800&format=jpg" : p.id+"?auto=compress,format&w=1800&q=75";
+
+  const grid = $("#galleryGrid");
+  photos.forEach((p,i) => {
+    const b = document.createElement("button");
+    b.className = "g-item reveal" + (i%4 ? " d"+(i%4) : "");
+    b.setAttribute("aria-label", `Open photo ${i+1} of ${photos.length}`);
+    b.innerHTML = `<img src="${thumb(p)}" alt="Bloom House backyard, photo ${i+1}" loading="${i<3?'eager':'lazy'}">` + (i===0 ? `<span class="g-count"><i class="fa-regular fa-images"></i> ${photos.length} photos</span>` : "");
+    b.querySelector("img").addEventListener("error", () => b.remove());
+    b.addEventListener("click", () => openLB(i));
+    grid.appendChild(b);
+  });
+
+  /* ---------- Lightbox ---------- */
+  const lb = $("#lightbox"), lbImg = $("#lbImg");
+  let cur = 0, lastFocus = null;
+  const show = i => {
+    cur = (i + photos.length) % photos.length;
+    lbImg.style.opacity = 0;
+    setTimeout(() => {
+      lbImg.src = full(photos[cur]);
+      lbImg.alt = `Bloom House backyard, photo ${cur+1}`;
+      lbImg.onload = () => lbImg.style.opacity = 1;
+    }, 150);
+    $("#lbCount").textContent = `${cur+1} / ${photos.length}`;
+  };
+  const openLB = i => { lastFocus = document.activeElement; show(i); lb.classList.add("open"); document.body.style.overflow="hidden"; $("#lbClose").focus(); };
+  const closeLB = () => { lb.classList.remove("open"); document.body.style.overflow=""; lastFocus && lastFocus.focus(); };
+  $("#lbPrev").onclick = () => show(cur-1);
+  $("#lbNext").onclick = () => show(cur+1);
+  $("#lbClose").onclick = closeLB;
+  lb.addEventListener("click", e => { if (e.target === lb) closeLB(); });
+  document.addEventListener("keydown", e => {
+    if (!lb.classList.contains("open")) return;
+    if (e.key === "Escape") closeLB();
+    if (e.key === "ArrowLeft") show(cur-1);
+    if (e.key === "ArrowRight") show(cur+1);
+  });
+  let tx = 0;
+  lb.addEventListener("touchstart", e => tx = e.touches[0].clientX, {passive:true});
+  lb.addEventListener("touchend", e => { const d = e.changedTouches[0].clientX - tx; if (Math.abs(d) > 50) show(cur + (d < 0 ? 1 : -1)); });
+
+  /* ---------- Nav, menu, scroll UI ---------- */
+  const nav = $("#nav"), mBar = $("#mBar"), toTop = $("#toTop");
+  const onScroll = () => {
+    const y = scrollY;
+    nav.classList.toggle("solid", y > 60);
+    mBar.classList.toggle("show", y > innerHeight * .7);
+    toTop.classList.toggle("show", y > innerHeight * 1.2);
+  };
+  addEventListener("scroll", onScroll, {passive:true}); onScroll();
+  toTop.onclick = () => scrollTo({top:0, behavior:"smooth"});
+
+  const menu = $("#mobileMenu"), burger = $("#burger");
+  const setMenu = open => { menu.classList.toggle("open", open); burger.setAttribute("aria-expanded", open); document.body.style.overflow = open ? "hidden" : ""; };
+  burger.onclick = () => setMenu(true);
+  $("#menuClose").onclick = () => setMenu(false);
+  $$("#mobileMenu a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+
+  /* ---------- Reveal on scroll ---------- */
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+  $$(".reveal").forEach(el => io.observe(el));
+
+  /* ---------- Booking form ---------- */
+  const types = ["Birthday","Quinceañera","Wedding","Baby Shower","Gender Reveal","Family Reunion","Photo / Video Shoot","Other"];
+  const icons = ["cake-candles","crown","ring","baby-carriage","baby","people-roof","video","star"];
+  $("#typeChips").innerHTML = types.map((t,i) => `<input type="radio" name="etype" id="t${i}" value="${t}" ${i===0?"checked":""}><label for="t${i}"><i class="fa-solid fa-${icons[i]}"></i>${t}</label>`).join("");
+
+  const pad = n => String(n).padStart(2,"0");
+  const today = new Date(); const iso = `${today.getFullYear()}-${pad(today.getMonth()+1)}-${pad(today.getDate())}`;
+  $("#bDate").min = iso; $("#qDate").min = iso;
+
+  const fmtTime = h => { const hh = ((h+11)%12)+1; return `${hh}:00 ${h%24<12?"AM":"PM"}`; };
+  const start = $("#bStart");
+  for (let h = 8; h <= 20; h++) start.insertAdjacentHTML("beforeend", `<option value="${h}" ${h===14?"selected":""}>${fmtTime(h)}</option>`);
+
+  let hours = MIN_H, guests = 25;
+  const money = n => "$" + n.toLocaleString("en-US");
+  const update = () => {
+    $("#hOut").textContent = hours; $("#gOut").textContent = guests;
+    $("#hMinus").disabled = hours <= MIN_H; $("#hPlus").disabled = hours >= MAX_H;
+    $("#gMinus").disabled = guests <= 1; $("#gPlus").disabled = guests >= MAX_G;
+    const type = document.querySelector('input[name="etype"]:checked').value;
+    const s = +start.value, e = s + hours;
+    const clean = $("#bClean").checked;
+    const total = RATE * hours + (clean ? CLEAN : 0);
+    $("#sType").textContent = type;
+    const d = $("#bDate").value;
+    $("#sDate").textContent = d ? new Date(d+"T12:00").toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",year:"numeric"}) : "Choose a date";
+    $("#sTime").textContent = `${fmtTime(s)} to ${fmtTime(e)}${e >= 24 ? " (next day)" : ""}`;
+    $("#sGuests").textContent = guests;
+    $("#sRateLbl").textContent = `$${RATE} × ${hours} hours`;
+    $("#sRate").textContent = money(RATE * hours);
+    $("#sCleanRow").style.display = clean ? "flex" : "none";
+    const t = $("#sTotal");
+    if (t.textContent !== money(total)) { t.textContent = money(total); t.classList.add("bump"); setTimeout(() => t.classList.remove("bump"), 250); }
+  };
+  $("#hMinus").onclick = () => { hours = Math.max(MIN_H, hours-1); update(); };
+  $("#hPlus").onclick  = () => { hours = Math.min(MAX_H, hours+1); update(); };
+  $("#gMinus").onclick = () => { guests = Math.max(1, guests-1); update(); };
+  $("#gPlus").onclick  = () => { guests = Math.min(MAX_G, guests+1); update(); };
+  $("#bookForm").addEventListener("input", e => { update(); const f = e.target.closest(".field"); if (f) f.classList.remove("err"); });
+  $("#bookForm").addEventListener("change", update);
+
+  const setType = t => { const r = [...document.getElementsByName("etype")].find(x => x.value === t); if (r) r.checked = true; };
+  const goBook = () => document.getElementById("book").scrollIntoView({behavior:"smooth"});
+
+  $("#quickForm").addEventListener("submit", e => {
+    e.preventDefault();
+    if ($("#qDate").value) $("#bDate").value = $("#qDate").value;
+    setType($("#qType").value);
+    guests = +$("#qGuests").value; hours = +$("#qHours").value;
+    update(); goBook();
+  });
+  $$(".occ").forEach(b => b.addEventListener("click", () => { setType(b.dataset.type); update(); goBook(); }));
+
+  $("#bookForm").addEventListener("submit", e => {
+    e.preventDefault();
+    const checks = [
+      ["#bDate", v => v && v >= iso],
+      ["#bName", v => v.trim().length > 1],
+      ["#bEmail", v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)],
+      ["#bPhone", v => v.replace(/\D/g,"").length >= 7]
+    ];
+    let first = null;
+    checks.forEach(([sel, ok]) => {
+      const el = $(sel), f = el.closest(".field"), good = ok(el.value);
+      f.classList.toggle("err", !good);
+      if (!good && !first) first = el;
+    });
+    if (first) { first.focus(); first.scrollIntoView({behavior:"smooth", block:"center"}); return; }
+    $("#successText").textContent = `Thank you, ${$("#bName").value.trim().split(" ")[0]}. Your ${$("#sType").textContent.toLowerCase()} request for ${$("#sDate").textContent} (${$("#sTime").textContent}) has been sent. Betiana will confirm by email at ${$("#bEmail").value} within a few hours.`;
+    $("#formBody").style.display = "none";
+    $("#success").style.display = "block";
+    $("#submitBtn").disabled = true; $("#submitBtn").style.opacity = .5;
+    document.getElementById("book").scrollIntoView({behavior:"smooth"});
+  });
+  $("#newReq").onclick = () => {
+    $("#bookForm").reset(); hours = MIN_H; guests = 25; start.value = 14;
+    $("#formBody").style.display = ""; $("#success").style.display = "none";
+    $("#submitBtn").disabled = false; $("#submitBtn").style.opacity = "";
+    update();
+  };
+
+  $("#yr").textContent = new Date().getFullYear();
+  update();
+})();
+</script>
+</body>
+</html>
